@@ -5,85 +5,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arequipa Turística</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-image: url(fondo-arequipa.jpg); /* Cambia ruta si tu imagen está en otra carpeta */
+      display: flex;
+      background-image: url(fondo-arequipa.jpg);
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
-      color: white; /* Texto blanco para que resalte */
+      color: white;
     }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background-color: #b71c1c;
+      min-height: 100vh;
+      padding: 20px;
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+
+    .sidebar h1 {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    .sidebar nav a {
+      display: block;
+      margin: 12px 0;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #e53935;
+      transition: background-color 0.2s;
+    }
+
+    .sidebar nav a:hover {
+      background-color: #d32f2f;
+    }
+
+    /* Contenido principal */
+    .main-content {
+      margin-left: 220px;
+      flex: 1;
+      padding: 2rem;
+    }
+
     header, footer {
       background-color: #b71c1c;
       color: white;
       text-align: center;
       padding: 1rem;
+      border-radius: 10px;
     }
-    nav {
-      background-color: #e53935;
-      padding: 0.5rem;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 1rem;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
+
     main {
-      padding: 2rem;
-      background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente para el texto */
+      background-color: rgba(0, 0, 0, 0.5);
       border-radius: 10px;
       max-width: 900px;
-      margin: 2rem auto; /* centra el main */
+      margin: 2rem auto;
+      padding: 2rem;
     }
+
     img {
       max-width: 100%;
       height: auto;
       border-radius: 8px;
       margin-top: 1rem;
       box-shadow: 0 0 10px rgba(0,0,0,0.7);
+      display: block;
     }
 
+    .galeria {
+      margin-top: 1.5rem;
+    }
+
+    .galeria img {
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Portal Turístico de Arequipa</h1>
-  </header>
-
-  <nav>
-    <a href="Inicio.html">Inicio</a>
-    <a href="lugares.html">Lugares Turísticos</a>
-    <a href="multimedia.html">Multimedia</a>
-    <a href="formulario.html">Formulario</a>
-    <a href="Dashboard.html">Dashboard</a>
-  </nav>
-
-  <main>
-    <h2>Bienvenidos a la ciudad blanca</h2>
-    <p>
-      Arequipa, conocida como la "Ciudad Blanca", es una de las ciudades más hermosas del Perú, destacando por su arquitectura colonial, su impresionante paisaje volcánico y su exquisita gastronomía.
-    </p>
-    <p>
-      En este portal podrás descubrir los lugares más turísticos, disfrutar de contenido multimedia y reservar tours.
-    </p>
-    <img src="arequipa.jpg" alt="Vista panorámica de Arequipa" />
-  <div class="galeria">
-    <img src="catedral.jpg" alt="Catedral de Arequipa" />
-    <img src="mirador.jpg" alt="Mirador de Yanahuara" />
-    <img src="plaza-de-armas.png" alt="Plaza de Armas de Arequipa" />
+  <!-- Sidebar lateral -->
+  <div class="sidebar">
+    <h1>Arequipa Turística</h1>
+    <nav>
+      <a href="Inicio.html">Inicio</a>
+      <a href="lugares.html">Lugares Turísticos</a>
+      <a href="multimedia.html">Multimedia</a>
+      <a href="formulario.html">Formulario</a>
+      <a href="Dashboard.html">Dashboard</a>
+    </nav>
   </div>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Portal Turístico de Arequipa. Todos los derechos reservados.</p>
-  </footer>
+  <!-- Contenido principal -->
+  <div class="main-content">
+    <header>
+      <h1>Portal Turístico de Arequipa</h1>
+    </header>
+
+    <main>
+      <h2>Bienvenidos a la ciudad blanca</h2>
+      <p>
+        Arequipa, conocida como la "Ciudad Blanca", es una de las ciudades más hermosas del Perú, destacando por su arquitectura colonial, su impresionante paisaje volcánico y su exquisita gastronomía.
+      </p>
+      <p>
+        En este portal podrás descubrir los lugares más turísticos, disfrutar de contenido multimedia y reservar tours.
+      </p>
+      <img src="arequipa.jpg" alt="Vista panorámica de Arequipa" />
+
+      <div class="galeria">
+        <img src="catedral.jpg" alt="Catedral de Arequipa" />
+        <img src="mirador.jpg" alt="Mirador de Yanahuara" />
+        <img src="plaza-de-armas.png" alt="Plaza de Armas de Arequipa" />
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Portal Turístico de Arequipa. Todos los derechos reservados.</p>
+    </footer>
+  </div>
 
 </body>
 </html>
