@@ -5,143 +5,187 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lugares Turísticos de Arequipa</title>
   <style>
-    body {
-        font-family: Arial, sans-serif;
-  margin: 0;
-  background-image: url(fondo-arequipa.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: white; /* Texto blanco para resaltar */
+    * {
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      background-image: url(fondo-arequipa.jpg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+    }
+
+    /* Sidebar lateral */
+    .sidebar {
+      width: 220px;
+      background-color: #b71c1c;
+      min-height: 100vh;
+      padding: 20px;
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+
+    .sidebar h1 {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    .sidebar nav a {
+      display: block;
+      margin: 12px 0;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #e53935;
+      transition: background-color 0.2s;
+    }
+
+    .sidebar nav a:hover {
+      background-color: #d32f2f;
+    }
+
+    /* Contenido principal */
+    .main-content {
+      margin-left: 220px;
+      flex: 1;
+      padding: 2rem;
+    }
+
     header, footer {
       background-color: #b71c1c;
       color: white;
       text-align: center;
       padding: 1rem;
+      border-radius: 10px;
     }
-    nav {
-      background-color: #e53935;
-      padding: 0.5rem;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 1rem;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
+
     main {
       padding: 2rem;
-      background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
-  border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      max-width: 1000px;
+      margin: 2rem auto;
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 2rem;
     }
+
     th, td {
       border: 1px solid #ccc;
       padding: 0.8rem;
       text-align: left;
     }
+
     th {
       background-color: #f44336;
       color: white;
     }
+
     img {
-        width: 100%;
-  max-width: 650px; 
-  height: auto;
-  border-radius: 12px;
-  margin-top: 1.5rem;
-  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+      width: 100%;
+      max-width: 650px;
+      height: auto;
+      border-radius: 12px;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+      display: block;
+    }
+
+    h3 {
+      margin-top: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Lugares Turísticos de Arequipa</h1>
-  </header>
+  <!-- Sidebar lateral -->
+  <div class="sidebar">
+    <img src="peru.jpg" alt="Logo Perú" style="max-width: 100%; height: auto; margin-bottom: 20px;"/>
+    <h1>Arequipa Turística</h1>
+    <nav>
+      <a href="Inicio.html">Inicio</a>
+      <a href="lugares.html">Lugares Turísticos</a>
+      <a href="multimedia.html">Multimedia</a>
+      <a href="formulario.html">Formulario</a>
+      <a href="Dashboard.html">Dashboard</a>
+    </nav>
+  </div>
 
-  <nav>
-    <a href="Inicio.html">Inicio</a>
-    <a href="lugares.html">Lugares Turísticos</a>
-    <a href="multimedia.html">Multimedia</a>
-    <a href="formulario.html">Formulario</a>
-    <a href="Dashboard.html">Dashboard</a>
-  </nav>
+  <!-- Contenido principal -->
+  <div class="main-content">
+    <header>
+      <h1>Lugares Turísticos de Arequipa</h1>
+    </header>
 
-  <main>
-    <h2>Descubre estos 6 sitios imperdibles en Arequipa</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Nombre del Lugar</th>
-          <th>Ubicación</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Monasterio de Santa Catalina</td>
-          <td>Centro Histórico de Arequipa</td>
-        </tr>
-        <tr>
-          <td>Volcán Misti</td>
-          <td>Cercanías de Arequipa</td>
-        </tr>
-        <tr>
-          <td>Cañón del Colca</td>
-          <td>Provincia de Caylloma</td>
-        </tr>
-        <tr>
-            <td>La ruta del Sillar</td>
-            <td>Cerro Colorado</td>
-          </tr>
+    <main>
+      <h2>Descubre estos 6 sitios imperdibles en Arequipa</h2>
+
+      <table>
+        <thead>
           <tr>
-            <td>Reserva de Salinas y Aguada</td>
-            <td>Pueblo de Huito</td>
+            <th>Nombre del Lugar</th>
+            <th>Ubicación</th>
           </tr>
-          <tr>
-            <td>Bosque de Piedras Choqolaqa</td>
-            <td>Provincia de Caylloma</td>
-          </tr>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <tr><td>Monasterio de Santa Catalina</td><td>Centro Histórico de Arequipa</td></tr>
+          <tr><td>Volcán Misti</td><td>Cercanías de Arequipa</td></tr>
+          <tr><td>Cañón del Colca</td><td>Provincia de Caylloma</td></tr>
+          <tr><td>La ruta del Sillar</td><td>Cerro Colorado</td></tr>
+          <tr><td>Reserva de Salinas y Aguada</td><td>Pueblo de Huito</td></tr>
+          <tr><td>Bosque de Piedras Choqolaqa</td><td>Provincia de Caylloma</td></tr>
+        </tbody>
+      </table>
 
-    <h3>Monasterio de Santa Catalina</h3>
-    <img src="monasterio-de-santa-catalina.png" alt="Monasterio de Santa Catalina" />
-    <p>Un impresionante complejo religioso del siglo XVI, lleno de historia, arte y arquitectura colonial. Es considerado una ciudad dentro de la ciudad por su gran tamaño y belleza. </p>
+      <h3>Monasterio de Santa Catalina</h3>
+      <img src="monasterio-de-santa-catalina.png" alt="Monasterio de Santa Catalina" />
+      <p>Un impresionante complejo religioso del siglo XVI, lleno de historia, arte y arquitectura colonial.</p>
 
-    <h3>Volcán Misti</h3>
-    <img src="volcan-misti.jpg" alt="Volcán Misti" />
-    <p>Un volcán emblemático que decora el horizonte de Arequipa. Ideal para los amantes del trekking y la fotografía por sus vistas panorámicas desde la cima.</p>
+      <h3>Volcán Misti</h3>
+      <img src="volcan-misti-1.jpg" alt="Volcán Misti" />
+      <p>Un volcán emblemático ideal para trekking y vistas panorámicas desde la cima.</p>
 
-    <h3>Cañón del Colca</h3>
-    <img src="colca.jpg" alt="Cañón del Colca" />
-    <p>Uno de los cañones más profundos del mundo, hogar del majestuoso cóndor andino. También es famoso por sus andenes preincaicos y pueblos tradicionales</p>
+      <h3>Cañón del Colca</h3>
+      <img src="colca.jpg" alt="Cañón del Colca" />
+      <p>Uno de los cañones más profundos del mundo, hogar del cóndor andino y andenes preincaicos.</p>
 
-    <h3>La Ruta del Sillar</h3>
-    <img src="sillar.jpg" alt="Ruta del Sillar" />
-    <p>Un recorrido por antiguas canteras donde se extrae el sillar que construyó la ciudad blanca. En el trayecto se observan esculturas talladas y paisajes rocosos únicos.</p>
+      <h3>La Ruta del Sillar</h3>
+      <img src="sillar.jpg" alt="Ruta del Sillar" />
+      <p>Un recorrido por canteras antiguas donde se extrae el sillar de la Ciudad Blanca.</p>
 
-    <h3>Reserva de Salinas y Aguada</h3>
-    <img src="salar.jpg" alt="Reserva de Salinas y Aguada" />
-    <p>Una reserva natural con vicuñas, flamencos y paisajes altiplánicos impresionantes. Ideal para los amantes de la naturaleza y la observación de fauna silvestre.</p>
+      <h3>Reserva de Salinas y Aguada</h3>
+      <img src="salar.jpg" alt="Reserva de Salinas y Aguada" />
+      <p>Reserva natural con flamencos, vicuñas y espectaculares paisajes altiplánicos.</p>
 
-    <h3>Bosque de Piedra Choqolaqa</h3>
-    <img src="choqolaqa.jpg" alt="Bosque de piedras Choqolaqa" />
-    <p>Formaciones rocosas únicas que parecen esculturas talladas por la naturaleza. Este lugar mágico guarda leyendas y es un destino perfecto para el ecoturismo.</p>
-  </main>
+      <h3>Bosque de Piedra Choqolaqa</h3>
+      <img src="choqolaqa.jpg" alt="Bosque de piedras Choqolaqa" />
+      <p>Formaciones rocosas únicas, perfectas para ecoturismo y aventuras en la naturaleza.</p>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Portal Turístico de Arequipa. Todos los derechos reservados.</p>
-  </footer>
+    <footer>
+      <p>&copy; 2025 Portal Turístico de Arequipa. Hecho por: Brianda Vasquez Rojas.</p>
+    </footer>
+  </div>
 
 </body>
 </html>
