@@ -5,9 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Formulario de Contacto - Arequipa Turística</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
+      display: flex;
       background-image: url(fondo-arequipa.jpg);
       background-size: cover;
       background-position: center;
@@ -15,35 +20,65 @@
       color: white;
     }
 
+    .sidebar {
+      width: 220px;
+      background-color: #b71c1c;
+      min-height: 100vh;
+      padding: 20px;
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+
+    .sidebar img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .sidebar h1 {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    .sidebar nav a {
+      display: block;
+      margin: 12px 0;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #e53935;
+      transition: background-color 0.2s;
+    }
+
+    .sidebar nav a:hover {
+      background-color: #d32f2f;
+    }
+
+    .main-content {
+      margin-left: 220px;
+      flex: 1;
+      padding: 2rem;
+    }
+
     header, footer {
       background-color: #b71c1c;
       color: white;
       text-align: center;
       padding: 1rem;
-    }
-
-    nav {
-      background-color: #e53935;
-      padding: 0.5rem;
-      text-align: center;
-    }
-
-    nav a {
-      margin: 0 1rem;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
+      border-radius: 10px;
     }
 
     main {
       padding: 2rem;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.5);
       border-radius: 10px;
-      max-width: 600px;
+      max-width: 1000px;
       margin: 2rem auto;
     }
 
@@ -58,67 +93,84 @@
     }
 
     input, textarea, select {
-      padding: 0.5rem;
+      padding: 0.7rem;
       border: none;
       border-radius: 5px;
       margin-top: 0.5rem;
+      font-size: 1rem;
     }
 
     button {
       margin-top: 1.5rem;
-      padding: 0.7rem;
-      background-color: #f44336;
+      padding: 0.8rem;
+      background-color: #e53935;
       color: white;
+      font-weight: bold;
       border: none;
       border-radius: 5px;
-      font-weight: bold;
       cursor: pointer;
+      transition: background-color 0.2s;
     }
 
     button:hover {
       background-color: #d32f2f;
     }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Contáctanos o Reserva un Tour</h1>
-  </header>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="peru.jpg" alt="Logo Perú" />
+    <h1>Arequipa Turística</h1>
+    <nav>
+      <a href="Inicio.html">Inicio</a>
+      <a href="lugares.html">Lugares Turísticos</a>
+      <a href="multimedia.html">Multimedia</a>
+      <a href="formulario.html">Formulario</a>
+      <a href="Dashboard.html">Dashboard</a>
+    </nav>
+  </div>
 
-  <nav>
-    <a href="Inicio.html">Inicio</a>
-    <a href="lugares.html">Lugares Turísticos</a>
-    <a href="multimedia.html">Multimedia</a>
-    <a href="formulario.html">Formulario</a>
-    <a href="Dashboard.html">Dashboard</a>
-  </nav>
+  <!-- Contenido principal -->
+  <div class="main-content">
+    <header>
+      <h1>Formulario de Contacto</h1>
+    </header>
 
-  <main>
-    <h2>Formulario de Solicitud</h2>
-    <form action="#" method="post">
-      <label for="nombre">Nombre completo:</label>
-      <input type="text" id="nombre" name="nombre" required />
+    <main>
+      <form action="#" method="post">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
 
-      <label for="correo">Correo electrónico:</label>
-      <input type="email" id="correo" name="correo" required />
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
 
-      <label for="tipo">¿Qué deseas hacer?</label>
-      <select id="tipo" name="tipo">
-        <option value="info">Solicitar más información</option>
-        <option value="reserva">Reservar un tour</option>
-      </select>
+        <label for="motivo">Motivo de contacto:</label>
+        <select id="motivo" name="motivo" required>
+          <option value="">Seleccione una opción</option>
+          <option value="consulta">Consulta turística</option>
+          <option value="sugerencia">Sugerencia</option>
+          <option value="reclamo">Reclamo</option>
+        </select>
 
-      <label for="comentarios">Comentarios o detalles adicionales:</label>
-      <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe aquí..."></textarea>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 
-      <button type="submit">Enviar</button>
-    </form>
-  </main>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Portal Turístico de Arequipa. Todos los derechos reservados.</p>
-  </footer>
+    <footer>
+      <p>&copy; 2025 Portal Turístico de Arequipa. Todos los derechos reservados.</p>
+    </footer>
+  </div>
 
 </body>
 </html>
