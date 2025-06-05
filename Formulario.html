@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario de Contacto - Arequipa Turística</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-image: url(imagenes/fondo\ Arequipa.jpg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+    }
+
+    header, footer {
+      background-color: #b71c1c;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    nav {
+      background-color: #e53935;
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.7rem;
+      background-color: #f44336;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Contáctanos o Reserva un Tour</h1>
+  </header>
+
+  <nav>
+    <a href="Inicio.html">Inicio</a>
+    <a href="lugares.html">Lugares Turísticos</a>
+    <a href="multimedia.html">Multimedia</a>
+    <a href="formulario.html">Formulario</a>
+    <a href="Dashboard.html">Dashboard</a>
+  </nav>
+
+  <main>
+    <h2>Formulario de Solicitud</h2>
+    <form action="#" method="post">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" required />
+
+      <label for="tipo">¿Qué deseas hacer?</label>
+      <select id="tipo" name="tipo">
+        <option value="info">Solicitar más información</option>
+        <option value="reserva">Reservar un tour</option>
+      </select>
+
+      <label for="comentarios">Comentarios o detalles adicionales:</label>
+      <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe aquí..."></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Portal Turístico de Arequipa. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

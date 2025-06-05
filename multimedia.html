@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multimedia - Arequipa Turística</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-image: url(imagenes/fondo\ Arequipa.jpg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+    }
+    header, footer {
+      background-color: #b71c1c;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    nav {
+      background-color: #e53935;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+    video, audio {
+      width: 100%;
+      margin-top: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Galería Multimedia de Arequipa</h1>
+  </header>
+
+  <nav>
+    <a href="Inicio.html">Inicio</a>
+    <a href="lugares.html">Lugares Turísticos</a>
+    <a href="multimedia.html">Multimedia</a>
+    <a href="formulario.html">Formulario</a>
+    <a href="Dashboard.html">Dashboard</a>
+  </nav>
+
+  <main>
+    <h2>Arequipa la Ciudad Blanca del Perú</h2>
+    <video controls autoplay muted loop>
+      <source src="imagenes/AREQUIPA VIDEO.mp4" type="video/mp4">
+      Tu navegador no soporta la reproducción de video.
+    </video>
+
+    <h3>Soy de Arequipa Señor</h3>
+<audio controls>
+  <source src="Audios/AREQUIPA.mp3" type="audio/mpeg">
+  Tu navegador no soporta la reproducción de audio.
+</audio>
+
+<h3>Carnaval de Arequipa</h3>
+<audio controls>
+  <source src="Audios/Carnaval de Arequipa.mp3" type="audio/mpeg">
+  Tu navegador no soporta la reproducción de audio.
+</audio>
+
+<h3>Ciudad Blanca</h3>
+<audio controls>
+  <source src="Audios/Ciudad Blanca - Los Dávalos.mp3" type="audio/mpeg">
+  Tu navegador no soporta la reproducción de audio.
+</audio>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Portal Turístico de Arequipa. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
