@@ -5,94 +5,149 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Multimedia - Arequipa Turística</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
+      display: flex;
       background-image: url(fondo-arequipa.jpg);
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
       color: white;
     }
+
+    /* Sidebar lateral */
+    .sidebar {
+      width: 220px;
+      background-color: #b71c1c;
+      min-height: 100vh;
+      padding: 20px;
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+
+    .sidebar h1 {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    .sidebar nav a {
+      display: block;
+      margin: 12px 0;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #e53935;
+      transition: background-color 0.2s;
+    }
+
+    .sidebar nav a:hover {
+      background-color: #d32f2f;
+    }
+
+    /* Contenido principal */
+    .main-content {
+      margin-left: 220px;
+      flex: 1;
+      padding: 2rem;
+    }
+
     header, footer {
       background-color: #b71c1c;
       color: white;
       text-align: center;
       padding: 1rem;
+      border-radius: 10px;
+      max-width: 1000px;
+      margin: 0 auto 2rem auto;
     }
-    nav {
-      background-color: #e53935;
-      padding: 0.5rem;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 1rem;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
+
     main {
       padding: 2rem;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.5);
       border-radius: 10px;
-      max-width: 800px;
-      margin: 2rem auto;
+      max-width: 1000px;
+      margin: 0 auto;
     }
+
     video, audio {
       width: 100%;
-      margin-top: 2rem;
+      margin-top: 1.5rem;
       border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+      display: block;
+    }
+
+    h2, h3 {
+      margin-top: 1.5rem;
+    }
+
+    footer {
+      font-size: 14px;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Galería Multimedia de Arequipa</h1>
-  </header>
+  <!-- Sidebar lateral -->
+  <div class="sidebar">
+    <img src="peru.jpg" alt="Logo Perú" style="max-width: 100%; height: auto; margin-bottom: 20px;"/>
+    <h1>Arequipa Turística</h1>
+    <nav>
+      <a href="Inicio.html">Inicio</a>
+      <a href="lugares.html">Lugares Turísticos</a>
+      <a href="multimedia.html">Multimedia</a>
+      <a href="formulario.html">Formulario</a>
+      <a href="Dashboard.html">Dashboard</a>
+    </nav>
+  </div>
 
-  <nav>
-    <!-- Cambié "Inicio.html" por "index.html" -->
-    <a href="index.html">Inicio</a>
-    <a href="lugares.html">Lugares Turísticos</a>
-    <a href="multimedia.html">Multimedia</a>
-    <a href="formulario.html">Formulario</a>
-    <a href="dashboard.html">Dashboard</a>
-  </nav>
+  <!-- Contenido principal -->
+  <div class="main-content">
+    <header>
+      <h1>Galería Multimedia de Arequipa</h1>
+    </header>
 
-  <main>
-    <h2>Arequipa la Ciudad Blanca del Perú</h2>
-    <video controls autoplay loop>
-      <source src="video.mp4" type="video/mp4">
-      Tu navegador no soporta la reproducción de video.
-    </video>
+    <main>
+      <h2>Arequipa, la Ciudad Blanca del Perú</h2>
+      <video controls autoplay muted loop>
+        <source src="video.mp4" type="video/mp4" />
+        Tu navegador no soporta la reproducción de video.
+      </video>
 
-    <h3>Soy de Arequipa Señor</h3>
-    <audio controls>
-      <source src="arequipa-b.mp3" type="audio/mpeg">
-      Tu navegador no soporta la reproducción de audio.
-    </audio>
+      <h3>Soy de Arequipa Señor</h3>
+      <audio controls>
+        <source src="arequipa.mp3" type="audio/mpeg" />
+        Tu navegador no soporta la reproducción de audio.
+      </audio>
 
-    <h3>Carnaval de Arequipa</h3>
-    <audio controls>
-      <source src="carnaval-de-arequipa.mp3" type="audio/mpeg">
-      Tu navegador no soporta la reproducción de audio.
-    </audio>
+      <h3>Carnaval de Arequipa</h3>
+      <audio controls>
+        <source src="carnaval-de-requipa.mp3" type="audio/mpeg" />
+        Tu navegador no soporta la reproducción de audio.
+      </audio>
 
-    <h3>Ciudad Blanca</h3>
-    <audio controls>
-      <source src="ciudad-blanca.mp3" type="audio/mpeg">
-      Tu navegador no soporta la reproducción de audio.
-    </audio>
-  </main> <!-- ← Asegúrate de cerrar <main> AQUÍ -->
+      <h3>Ciudad Blanca</h3>
+      <audio controls>
+        <source src="ciudad-blanca.mp3" type="audio/mpeg" />
+        Tu navegador no soporta la reproducción de audio.
+      </audio>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Portal Turístico de Arequipa. Todos los derechos reservados.</p>
-  </footer>
+    <footer>
+      <p>&copy; 2025 Portal Turístico de Arequipa. Hecho por: Brianda Vasquez Rojas.</p>
+    </footer>
+  </div>
 
 </body>
 </html>
